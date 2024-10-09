@@ -8,6 +8,7 @@ A simple MERN stack application that allows users to add, view, edit, and delete
 - **View Books**: Users can view a list of all books. 
 - **Edit Books**: Users can edit the details of existing books.
 - **Delete Books**: Users can remove books from the collection.
+- **Dark and Light Mode** : Dark and Light mode for user experience.
 
 ## Technologies Used
 
