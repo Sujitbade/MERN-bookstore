@@ -32,14 +32,19 @@ router.get("/:id", async (req, res) => {
 // POST create new book
 router.post("/", async (req, res) => {
   try {
-    const { title, author, publishYear } = req.body;
+    const { title, author, publishYear, description } = req.body;
     if (!title || !author || !publishYear) {
       return res
         .status(400)
         .send({ message: "Please provide all required fields" });
     }
 
-    const newBook = { title, author, publishYear };
+    const newBook = {
+      title,
+      author,
+      publishYear,
+      description: description || "No description available for the book.",
+    };
     const book = await Book.create(newBook);
     return res.status(201).send(book);
   } catch (err) {

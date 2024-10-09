@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.common-span-class {
+  @apply block text-xl dark:text-sky-500;
+}

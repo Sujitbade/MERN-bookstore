@@ -1,7 +1,12 @@
 import mongoose from "mongoose";
+import { nanoid } from "nanoid";
 
 const bookSchema = mongoose.Schema(
   {
+    _id: {
+      type: String,
+      default: () => nanoid(10),
+    },
     title: {
       type: String,
       required: true,
@@ -14,11 +19,15 @@ const bookSchema = mongoose.Schema(
       type: Number,
       required: true,
     },
+    description: {
+      type: String,
+      required: true,
+    },
   },
   {
-    timestamps: true, // Correct option for timestamps
+    timestamps: true,
   }
 );
 
-// Export the model with the correct name
+// Export the model
 export const Book = mongoose.model("Book", bookSchema);

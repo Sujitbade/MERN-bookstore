@@ -24,16 +24,15 @@ const DeleteBook = () => {
   };
 
   return (
-    <div className="p-4">
+    <div className="flex items-center justify-center h-screen">
       <BackButton />
-      <h1 className="text-3xl my-4">Delete Book</h1>
-      <div className="flex flex-col items-center border-2 border-red-500 rounded-xl w-[600px] p-6 mx-auto bg-red-50">
+      <div className="flex flex-col items-center justify-center border-2 border-red-700 rounded-xl w-[600px] p-6 bg-white dark:bg-gray-800">
         <h2 className="text-xl text-red-600 mb-4">
-          Are you sure you want to delete this book?
+          Are you sure you want to delete
         </h2>
-        <div className="flex space-x-4">
+        <div className="flex gap-4">
           <button
-            className="p-2 bg-red-600 text-white rounded w-32 hover:bg-red-700 transition"
+            className="p-2 bg-red-600 text-white rounded w-32 hover:bg-red-8e00 transition"
             onClick={handleDeleteBook}
             disabled={loading}
           >
